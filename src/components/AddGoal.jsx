@@ -6,14 +6,14 @@ class AddGoal extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: ''
+      title: '',
+      email:null
     }
   }
 
   addGoal() {
     console.log('this', this);
-    const { title } = this.state;
-    const { email } = this.props.user;
+    const { title ,email} = this.state;
     goalRef.push({email, title});
   }
 
@@ -27,6 +27,13 @@ class AddGoal extends Component {
             className="form-control"
             style={{marginRight: '5px'}}
             onChange={event => this.setState({title: event.target.value})}
+          />
+            <input
+            type="email"
+            placeholder="Add your email"
+            className="form-control"
+            // style={{marginRight: '5px'}}
+            onChange={event => this.setState({email: event.target.value})}
           />
           <button
             className="btn btn-success"
