@@ -1,28 +1,28 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { setCompleted } from '../actions';
-import { completeGoalRef } from '../firebase';
+// import { completeGoalRef } from '../firebase';
 
 class CompleteGoalList extends Component {
   componentDidMount() {
-    completeGoalRef.on('value', snap => {
-      let completeGoals = [];
-      snap.forEach(completeGoal => {
-        const { email, title } = completeGoal.val();
-        completeGoals.push({email, title})
-      })
-      this.props.setCompleted(completeGoals);
-    })
+    // completeGoalRef.on('value', snap => {
+    //   let completeGoals = [];
+    //   snap.forEach(completeGoal => {
+    //     const { email, title } = completeGoal.val();
+    //     completeGoals.push({email, title})
+    //   })
+    //   this.props.setCompleted(completeGoals);
+    // })
   }
 
   clearCompleted() {
-    completeGoalRef.set([]);
+    // completeGoalRef.set([]);
   }
 
   render() {
     return (
       <div>
-        {
+        {/* {
           this.props.completeGoals.map((completeGoal, index) => {
             const { title, email } = completeGoal;
             return (
@@ -31,7 +31,7 @@ class CompleteGoalList extends Component {
               </div>
             )
           })
-        }
+        } */}
         <button
           className="btn btn-primary"
           onClick={() => this.clearCompleted()}

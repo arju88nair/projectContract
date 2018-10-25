@@ -7,7 +7,6 @@ import { createLogger } from 'redux-logger'
 import App from './containers/App'
 import reducer from './reducers'
 import { Router, Route, browserHistory } from 'react-router';
-import App from './containers/App';
 
 const middleware = [ thunk ]
 if (process.env.NODE_ENV !== 'production') {
