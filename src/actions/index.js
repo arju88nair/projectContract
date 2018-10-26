@@ -2,11 +2,13 @@ import {  SET_GOALS, SET_COMPLETED } from '../constants';
 
 
 
-export function setGoals(goals) {
+export function setGoals(email,title) {
   const action = {
     type: SET_GOALS,
-    goals
+    email,
+    title
   }
+  console.log(action,"action")
   return action;
 }
 

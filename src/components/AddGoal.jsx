@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import {setGoals} from '../actions'
 // import { goalRef } from '../firebase';
 
 class AddGoal extends Component {
@@ -14,6 +15,9 @@ class AddGoal extends Component {
   addGoal() {
     console.log('this', this);
     const { title ,email} = this.state;
+
+    this.props.dispatch(setGoals(email,title))
+
     // goalRef.push({email, title});
   }
 
