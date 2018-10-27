@@ -15,6 +15,7 @@ const goal = (action) => {
   }
 }
 
+
 export default (state = [], action) => {  
   let goals = null;
   state = read_cookie('goals');
