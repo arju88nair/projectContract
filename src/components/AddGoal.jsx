@@ -23,9 +23,17 @@ class AddGoal extends Component {
 
   render() {
     return (
-      <div className="form-inline">
-        <div className="form-group">
-          <input
+
+
+
+	<div className="wrapper">
+		<div className="wrapper-inner">
+			<div className="box-wrapper">
+				<div className="box">
+				
+					<div className="box-inner">
+						<h3 className="name">Christina W. Turner</h3>
+            <input
             type="text"
             placeholder="Add a goal"
             className="form-control"
@@ -46,8 +54,16 @@ class AddGoal extends Component {
           >
             Submit
           </button>
-        </div>
-      </div>
+					</div>
+				
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
     )
   }
 }
