@@ -75,12 +75,12 @@ html,
   -webkit-box-shadow: 0 0 0 3px #c30eb8 , 0 0 0 8px #fff;
   box-shadow: 0 0 0 3px #c30eb8 , 0 0 0 8px #fff;
   top: -75px;
-  margin-left: -75px;
+  margin-left: -43px;
   left: 50%;
   position: absolute;
 }
 .avatar img {
-  width: 150px;
+  width: 83px;
   -webkit-border-radius: 50%;
   border-radius: 50%;
   display: block;

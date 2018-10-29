@@ -4,12 +4,7 @@ import {setGoals} from '../actions'
 import { ValidatorForm, TextValidator} from 'react-material-ui-form-validator';
 import { withStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
-import MenuItem from '@material-ui/core/MenuItem';
-import FormHelperText from '@material-ui/core/FormHelperText';
-import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
-import Input from '@material-ui/core/Input';
-import InputLabel from '@material-ui/core/InputLabel';
+import SimpleCard from './witness'
 
 
 const styles = theme => ({
@@ -70,6 +65,9 @@ handleSubmit = () => {
 		<div className="wrapper-inner">
 			<div className="box-wrapper">
 				<div className="box">
+        <div class="avatar">
+						<img src="http://remtsoy.com/experiments/user_card/img/avatar.jpg"></img>
+					</div>
 					<div className="box-inner">
         
         <div className="col-md-12 row  form-div d-flex justify-content-center">
@@ -101,6 +99,11 @@ handleSubmit = () => {
                
             
       </div>
+      <br></br>
+      <div className="d-flex justify-content-center">
+      <SimpleCard/>
+      </div>
+      
 					</div>
 				
 				</div>
