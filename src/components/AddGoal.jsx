@@ -1,7 +1,21 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import {setGoals} from '../actions'
-// import { goalRef } from '../firebase';
+import { ValidatorForm, TextValidator} from 'react-material-ui-form-validator';
+import { withStyles } from '@material-ui/core/styles';
+import TextField from '@material-ui/core/TextField';
+
+
+
+const styles = theme => ({
+  textField: {
+    marginLeft: theme.spacing.unit,
+    marginRight: theme.spacing.unit,
+    width: 200,
+  },
+});
+
+
 
 class AddGoal extends Component {
   constructor(props) {
@@ -21,7 +35,25 @@ class AddGoal extends Component {
     // goalRef.push({email, title});
   }
 
+
+
+  handleChange = (event) => {
+    const email = event.target.value;
+    this.setState({ email });
+}
+
+handleSubmit = () => {
+    // your submit logic
+}
+
+
+
+
   render() {
+    const { email } = this.state;  
+    const { classes } = this.props;
+
+
     return (
 
 
@@ -30,30 +62,34 @@ class AddGoal extends Component {
 		<div className="wrapper-inner">
 			<div className="box-wrapper">
 				<div className="box">
-				
 					<div className="box-inner">
-						<h3 className="name">Christina W. Turner</h3>
-            <input
-            type="text"
-            placeholder="Add a goal"
-            className="form-control"
-            style={{marginRight: '5px'}}
-            onChange={event => this.setState({title: event.target.value})}
-          />
-            <input
-            type="email"
-            placeholder="Add your email"
-            className="form-control"
-            // style={{marginRight: '5px'}}
-            onChange={event => this.setState({email: event.target.value})}
-          />
-          <button
-            className="btn btn-success"
-            type="button"
-            onClick={() => this.addGoal()}
-          >
-            Submit
-          </button>
+        
+        <div className="col-md-12 row inline-flex">
+
+        
+         <div col-md-2 style={{ alignSelf: 'center' }}> I &nbsp;</div>
+        <TextField
+               className="col-md-4 "
+               style={{ alignSelf: 'center' }}
+               placeholder="Name"
+
+                />
+                (&nbsp;
+                
+                 <TextField
+               className="col-md-4 "
+               style={{ alignSelf: 'center' }}           
+                   placeholder="Email"
+
+                />&nbsp;)
+                
+
+                <div className="col-md-4">KHbjkbhbkjbn</div>
+            
+      </div>
+      
+      
+
 					</div>
 				
 				</div>
@@ -76,4 +112,4 @@ function mapStateToProps(state) {
 }
 
 
-export default connect(mapStateToProps, null)(AddGoal);
+export default connect(mapStateToProps, null)( withStyles(styles)(AddGoal));

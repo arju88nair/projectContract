@@ -36,10 +36,10 @@ class App extends Component {
 
       <div className="container-fluid h-100">
       <div className="row justify-content-center h-100">
-        <div className="col-4 hidden-md-down yellow" >
+        <div className="col-8 hidden-md-down left" >
            <AddGoal/>       
         </div>
-        <div className="col-10 col-sm-10 col-md-10 col-lg-8 col-xl-8">
+        <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 right">
           Form Goes Here
         </div>
       </div>

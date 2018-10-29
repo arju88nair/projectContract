@@ -2,9 +2,14 @@ html,body {
   height: 100vh;
 }
 
-.yellow {
+.left {
   height: 100vh;
-  background: salmon;
+  background: #009FFF;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ec2F4B, #009FFF);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ec2F4B, #009FFF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-box-shadow: 10px -1px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px -1px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px -1px 5px 0px rgba(0,0,0,0.75);  
 }
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300);
@@ -16,16 +21,6 @@ html,
   width: 100%;
 }
 
-.wrapper {
-  background: -webkit-gradient(linear, left bottom, right top, color-stop(0, #62075c), color-stop(1, #c30eb8));
-  background: -webkit-linear-gradient(left bottom, #62075c 0, #c30eb8 100%);
-  background: -moz-linear-gradient(left bottom, #62075c 0, #c30eb8 100%);
-  background: -o-linear-gradient(left bottom, #62075c 0, #c30eb8 100%);
-  background: -ms-linear-gradient(left bottom, #62075c 0, #c30eb8 100%);
-  background: linear-gradient(left bottom, #62075c 0, #c30eb8 100%);
-  position: relative;
-  z-index: 1;
-}
 .wrapper:before {
   content: '';
   position: absolute;
@@ -33,7 +28,7 @@ html,
   left: 0;
   height: 100%;
   width: 100%;
-  background-image: url("http://remtsoy.com/experiments/user_card/img/food.png");
+  background-image: url("https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX10420175.jpg");
   z-index: 2;
   opacity: 0.3;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
@@ -62,16 +57,17 @@ html,
   border-radius: 8px;
   -webkit-box-shadow: 0 4px 1px rgba(0,0,0,0.1);
   box-shadow: 0 4px 1px rgba(0,0,0,0.1);
-  width: 380px;
+  width: auto;
   background: #fff;
   text-align: center;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding-top: 65px;
+  padding-top: 17px;
 }
 .box-inner {
-  padding: 30px;
+  margin: 15px;
+  padding-bottom: 10px;
 }
 .avatar {
   -webkit-border-radius: 50%;
