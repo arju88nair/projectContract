@@ -66,7 +66,7 @@ handleSubmit = () => {
 			<div className="box-wrapper">
 				<div className="box">
         <div class="avatar">
-						<img src="http://remtsoy.com/experiments/user_card/img/avatar.jpg"></img>
+						<img src="https://cdn3.iconfinder.com/data/icons/bussiness-finance-line-1/1/12-512.png"></img>
 					</div>
 					<div className="box-inner">
         
@@ -100,7 +100,7 @@ handleSubmit = () => {
             
       </div>
       <br></br>
-      <div className="d-flex justify-content-center">
+      <div className="d-flex justify-content-center witness">
       <SimpleCard/>
       </div>
       

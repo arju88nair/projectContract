@@ -8,23 +8,19 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
 import Divider from '@material-ui/core/Divider';
+import Icon from '@material-ui/core/Icon';
 
 
 const styles = {
   card: {
     width: 500,
+    background: 'floralwhite'
   },
-  bullet: {
-    display: 'inline-block',
-    margin: '0 2px',
-    transform: 'scale(0.8)',
-  },
+ 
   title: {
     fontSize: 14,
   },
-  pos: {
-    marginBottom: 12,
-  },
+ 
   'input': {
     '&::placeholder': {
       textAlign: 'center',
@@ -44,7 +40,6 @@ class SimpleCard extends Component {
 
       render(){
   const { classes } = this.props;
-  const bull = <span className={classes.bullet}>•</span>;
 
   return (
     <Card className={classes.card}>
@@ -75,9 +70,11 @@ class SimpleCard extends Component {
                InputProps={{ classes: {input: this.props.classes['input']} }} />
                 </div>
       </CardContent>
-      <CardActions>
-        <Button size="small">Learn More</Button>
-      </CardActions>
+      <CardActions className="d-flex justify-content-center">
+      <Button variant="outlined" size="small" color="primary" className={classes.button}>
+        Sign &nbsp;
+        <Icon className={classes.rightIcon}>send</Icon>
+      </Button>  </CardActions>
     </Card>
   );
 }
