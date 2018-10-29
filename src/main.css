@@ -57,7 +57,7 @@ html,
   border-radius: 8px;
   -webkit-box-shadow: 0 4px 1px rgba(0,0,0,0.1);
   box-shadow: 0 4px 1px rgba(0,0,0,0.1);
-  width: auto;
+  width: 600px;
   background: #fff;
   text-align: center;
   -webkit-box-sizing: border-box;
@@ -67,7 +67,7 @@ html,
 }
 .box-inner {
   margin: 15px;
-  padding-bottom: 10px;
+  padding-bottom: 25px;
 }
 .avatar {
   -webkit-border-radius: 50%;
@@ -236,4 +236,10 @@ h5 {
 }
 .social-list > li:last-child > a {
   border-right: none;
+}
+
+
+.form-div
+{
+  margin: 0px;
 }

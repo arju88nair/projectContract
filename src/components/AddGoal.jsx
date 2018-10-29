@@ -4,7 +4,12 @@ import {setGoals} from '../actions'
 import { ValidatorForm, TextValidator} from 'react-material-ui-form-validator';
 import { withStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
-
+import MenuItem from '@material-ui/core/MenuItem';
+import FormHelperText from '@material-ui/core/FormHelperText';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
+import Input from '@material-ui/core/Input';
+import InputLabel from '@material-ui/core/InputLabel';
 
 
 const styles = theme => ({
@@ -12,6 +17,9 @@ const styles = theme => ({
     marginLeft: theme.spacing.unit,
     marginRight: theme.spacing.unit,
     width: 200,
+  },
+  formControl: {
+    minWidth: 240,
   },
 });
 
@@ -64,32 +72,35 @@ handleSubmit = () => {
 				<div className="box">
 					<div className="box-inner">
         
-        <div className="col-md-12 row inline-flex">
-
-        
-         <div col-md-2 style={{ alignSelf: 'center' }}> I &nbsp;</div>
+        <div className="col-md-12 row  form-div d-flex justify-content-center">
+         <div className="col-md-1" style={{ alignSelf: 'center' }}> I &nbsp;</div>
         <TextField
-               className="col-md-4 "
+               className="col-md-2"
                style={{ alignSelf: 'center' }}
-               placeholder="Name"
-
+               placeholder="Your name"
                 />
-                (&nbsp;
-                
-                 <TextField
-               className="col-md-4 "
-               style={{ alignSelf: 'center' }}           
-                   placeholder="Email"
-
-                />&nbsp;)
-                
-
-                <div className="col-md-4">KHbjkbhbkjbn</div>
+                <div className="col-md-5"  style={{ alignSelf: 'center' ,textAlign: 'left'}}>, vouch that I will</div>
+                <TextField
+               className="col-md-4"
+               style={{ alignSelf: 'center',marginLeft:"-15%" }}
+               placeholder="Do what?"
+                />
             
       </div>
-      
-      
+      <br></br>
+      <div className="col-md-12 row  form-div d-flex justify-content-center"                style={{ alignSelf: 'center',marginLeft:"8%"  }}>
+         <div className="col-md-4" style={{ alignSelf: 'center' }}> for/within </div>
+        <TextField
+               className="col-md-1"
+               style={{ alignSelf: 'center',marginLeft:"-8%"  }}
+               placeholder=""
+               type="number"
 
+                />
+                <div className="col-md-5"  style={{ alignSelf: 'center' ,textAlign: 'left'}}>days</div>
+               
+            
+      </div>
 					</div>
 				
 				</div>
