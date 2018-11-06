@@ -24,8 +24,11 @@ class AddGoal extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: '',
-      email:null
+      formData: {
+        email: '',
+        task: '',
+        days:''
+    },
     }
   }
 
@@ -41,8 +44,10 @@ class AddGoal extends Component {
 
 
   handleChange = (event) => {
-    const email = event.target.value;
-    this.setState({ email });
+    const { formData } = this.state;
+    formData[event.target.name] = event.target.value;
+    this.setState({ formData });
+   
 }
 
 handleSubmit = () => {
@@ -51,9 +56,8 @@ handleSubmit = () => {
 
 
 
-
   render() {
-    const { email } = this.state;  
+    const { formData } = this.state;  
     const { classes } = this.props;
 
 
@@ -69,31 +73,61 @@ handleSubmit = () => {
 						<img src="https://cdn3.iconfinder.com/data/icons/bussiness-finance-line-1/1/12-512.png"></img>
 					</div>
 					<div className="box-inner">
+            <ValidatorForm
+                ref="form"
+                onSubmit={this.handleSubmit}
+                onError={errors => console.log(errors)}
+            >
         
         <div className="col-md-12 row  form-div d-flex justify-content-center">
          <div className="col-md-1" style={{ alignSelf: 'center' }}> I &nbsp;</div>
-        <TextField
-               className="col-md-2"
+
+
+          <TextValidator
+          className="col-md-2"
                style={{ alignSelf: 'center' }}
                placeholder="Your name"
+                    label="Email"
+                    onChange={this.handleChange}
+                    name="email"
+                    value={formData.email}
+                    validators={['required']}
+                    errorMessages={['Required']}
                 />
+    
                 <div className="col-md-5"  style={{ alignSelf: 'center' ,textAlign: 'left'}}>, vouch that I will</div>
-                <TextField
-               className="col-md-4"
+
+                  <TextValidator
+         className="col-md-4"
                style={{ alignSelf: 'center',marginLeft:"-15%" }}
                placeholder="Do what?"
+                    label="Task"
+                    onChange={this.handleChange}
+                    name="Task"
+                    value={formData.task}
+                    validators={['required']}
+                    errorMessages={['Required']}
                 />
+    
             
       </div>
       <br></br>
       <div className="col-md-12 row  form-div d-flex justify-content-center"                style={{ alignSelf: 'center',marginLeft:"8%"  }}>
          <div className="col-md-4" style={{ alignSelf: 'center' }}> for/within </div>
-        <TextField
-               className="col-md-1"
+
+
+
+                  <TextValidator
+         className="col-md-1"
                style={{ alignSelf: 'center',marginLeft:"-8%"  }}
                placeholder=""
                type="number"
-
+                    label="Days"
+                    onChange={this.handleChange}
+                    name="days"
+                    value={formData.days}
+                    validators={['required']}
+                    errorMessages={['Required']}
                 />
                 <div className="col-md-5"  style={{ alignSelf: 'center' ,textAlign: 'left'}}>days</div>
                
@@ -101,9 +135,10 @@ handleSubmit = () => {
       </div>
       <br></br>
       <div className="d-flex justify-content-center witness">
-      <SimpleCard/>
-      </div>
+      <SimpleCard state={this.state}/>
       
+      </div>
+      </ValidatorForm>
 					</div>
 				
 				</div>

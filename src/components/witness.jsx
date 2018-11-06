@@ -71,7 +71,7 @@ class SimpleCard extends Component {
                 </div>
       </CardContent>
       <CardActions className="d-flex justify-content-center">
-      <Button variant="outlined" size="small" color="primary" className={classes.button}>
+      <Button variant="outlined" size="small" color="primary" className={classes.button} type="submitz,">
         Sign &nbsp;
         <Icon className={classes.rightIcon}>send</Icon>
       </Button>  </CardActions>
